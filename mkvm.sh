@@ -774,9 +774,9 @@ f_config_rc_conf_debug $vm_mountpoint $vm_hostname $vm_ipv4 $vm_gw
 echo
 echo Configuring resolv.conf
 if [ ! "$vm_ipv4" = "" ]; then
-f_config_resolv_conf_preflight $vm_mountpoint $vm_searchdomain $vm_dns
-f_config_resolv_conf $vm_mountpoint $vm_searchdomain $vm_dns
-f_config_resolv_conf_debug $vm_mountpoint $vm_searchdomain $vm_dns
+f_config_resolv_conf_preflight "$vm_mountpoint" "$vm_searchdomain" "$vm_dns"
+f_config_resolv_conf "$vm_mountpoint" "$vm_searchdomain" "$vm_dns"
+f_config_resolv_conf_debug "$vm_mountpoint" "$vm_searchdomain" "$vm_dns"
 fi
 
 echo
