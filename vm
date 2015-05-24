@@ -309,7 +309,7 @@ f_info "Verifying if $1 is already loaded"
 
 # Note that we do not set the iso as $vm_device because grub will handle this
 	f_info "Creating $host_vmdir/$1/device.map"
-	echo "(hd0) $host_vmdir/$1/${1}.img" > $host_vmdir/$1/device.map 
+	echo "(hd0) $vm_device" > $host_vmdir/$1/device.map 
 
 # The ISO *should* be there but this check will avoid breakage
 	f_info "Checking if we are in ISO boot mode"
